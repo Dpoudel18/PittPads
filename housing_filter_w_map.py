@@ -101,11 +101,11 @@ max_distance = st.slider("Select Maximum Distance from CMU (km)",
                           value=2.0)  # Default value
 
 # Filter the DataFrame based on the selected distance
-filtered_df = df[df['distance_from_CMU'] <= max_distance]
+distance_filtered_df = df[df['distance_from_CMU'] <= max_distance]
 
 # Display the filtered DataFrame
 st.subheader("Filtered Data (Distance ≤ {:.2f} km)".format(max_distance))
-st.dataframe(filtered_df)
+st.dataframe(distance_filtered_df)
 
 cmu_lat = 40.443336  # Latitude of CMU
 cmu_lon = -79.944023  # Longitude of CMU
@@ -117,7 +117,7 @@ m = folium.Map(location=[cmu_lat, cmu_lon], zoom_start=15)
 def get_address(address):
     return address.split(',')[0]
 
-df_cleaned = filtered_df.dropna(subset=['location', 'latitude', 'longitude'])
+df_cleaned = distance_filtered_df.dropna(subset=['location', 'latitude', 'longitude'])
 
 # Add markers for each house in the DataFrame
 for index, row in df_cleaned.iterrows():
