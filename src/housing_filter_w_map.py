@@ -7,11 +7,11 @@ from streamlit_folium import st_folium
 
 # Load the CSV files
 
-redfin_df = pd.read_csv('data/cleaned_redfin_data.csv')
-craigslist_df = pd.read_csv('data/cleaned_cl_data.csv')
-apartments_df = pd.read_csv('data/cleaned_apartments_data.csv')
-zillow_df = pd.read_csv('data/cleaned_zillow_data.csv')
-fair_market_rent_df = pd.read_csv('data/fair_market_rent_pittsburgh_HUD.csv')
+redfin_df = pd.read_csv('../data/redfin_pittsburgh_rental_complete.csv')
+craigslist_df = pd.read_csv('../data/cleaned_cl_data.csv')
+apartments_df = pd.read_csv('../data/cleaned_apartments_data.csv')
+zillow_df = pd.read_csv('../data/cleaned_zillow_data.csv')
+fair_market_rent_df = pd.read_csv('../data/fair_market_rent_pittsburgh_HUD.csv')
 
 def distance_from_cmu(lat, lon):
     # Radius of the Earth in kilometers

@@ -126,7 +126,7 @@ df = pd.DataFrame(all_data)
 
 driver.quit()
 
-file = 'redfin_pittsburgh_rental_complete.csv'
+file = '../data/redfin_pittsburgh_rental_complete.csv'
 
 # df = pd.read_csv(file, encoding='utf-8')
 

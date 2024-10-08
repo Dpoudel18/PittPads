@@ -87,7 +87,7 @@ def zillow_data():
     print("\nZillow Data Extraction Completed!\n")
     # Create a DataFrame from the collected data
     df = pd.DataFrame(all_info, columns=["price", "name", "location", "zip_code", "beds", "baths", "size", "units", "phone", "image_url", "property_url", "latitude", "longitude", "description", "amenity", "data_source"])
-    df.to_csv("data/cleaned_zillow_data.csv")
+    df.to_csv("../data/cleaned_zillow_data.csv")
     return df
 
 print(zillow_data())
