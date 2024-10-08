@@ -37,18 +37,18 @@ def get_url():
 # Function to scrape detailed data for each property
 def zillow_data():
     all_info = []  # List to hold all property information
-    property_url = list(set(get_url()))  # Get the list of property URLs
+    property_urls = get_url()  # Get the list of property URLs
 
     print("\nZillow Data Extraction Started!\n")
-    for url_link in property_url:
+    for url_link in property_urls:
         try:
             # Make a request to each property URL
             
             data = requests.get(f'https://{url_link}', headers=header)
             print(f'Extracted... https://{url_link}')
         except requests.exceptions.ConnectionError as e:
-            print("Site not reachable! Zillow Rate Limit Reached!", url_link)
-            time.sleep(3)
+            print("Site not reachable (Rate Limit Issue)! Skip...  ", url_link)
+            time.sleep(0.1)
             continue  # Skip to the next URL on connection error
         
         # Print the current URL being processed
@@ -63,7 +63,7 @@ def zillow_data():
 
             # Extract relevant information from the JSON data
             name = json_data['name']
-            address = (json_data['address']['streetAddress'] + ", " +
+            location = (json_data['address']['streetAddress'] + ", " +
                        json_data['address']['addressLocality'] + ", " +
                        json_data['address']['addressRegion'] + ", " +
                        json_data['address']['postalCode'])
@@ -71,17 +71,22 @@ def zillow_data():
             price = json_data['offers']['lowPrice']
             latitude = json_data['geo']['latitude']
             longitude = json_data['geo']['longitude']
+            beds = None
+            baths = None
+            size = None
+            units = None
             phone = json_data.get('telephone', 'N/A')  
             description = json_data['description']
             amenity = json_data['amenityFeature']['name']
-            image = json_data['image']
-            url = 'https://zillow.com' + json_data['id']
+            image_url = json_data['image']
+            property_url = 'https://zillow.com' + json_data['id']
             data_source = 'Zillow'
-            all_info.append([name, address, zip_code, price, latitude, longitude, phone, description, amenity, image, url, data_source])
-            time.sleep(1)
+            all_info.append([price,name,location,zip_code,beds,baths,size,units,phone,image_url,property_url,latitude,longitude,description,amenity,data_source])
+
+            time.sleep(0.1)
     print("\nZillow Data Extraction Completed!\n")
     # Create a DataFrame from the collected data
-    df = pd.DataFrame(all_info, columns=["name", "location", "zip_code", "price", "latitude", "longitude", "phone", "description", "amenity", "image_url", "property_url", "data_source"])
+    df = pd.DataFrame(all_info, columns=["price", "name", "location", "zip_code", "beds", "baths", "size", "units", "phone", "image_url", "property_url", "latitude", "longitude", "description", "amenity", "data_source"])
     df.to_csv("data/cleaned_zillow_data.csv")
     return df
 

@@ -8,7 +8,7 @@ import csv
 import re
 
 # Set the path to your ChromeDriver
-chrome_driver_path = "/Users/weiwei/Desktop/chromedriver-mac-arm64/chromedriver"
+chrome_driver_path = "/Users/dipeshpoudel/downloads/chromedriver-mac64/chromedriver"
 service = Service(chrome_driver_path)
 
 # Initialize Chrome browser
