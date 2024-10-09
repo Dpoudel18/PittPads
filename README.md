@@ -1,4 +1,4 @@
-##PittPads README
+## PittPads README
 
 Group Members:
 
@@ -7,12 +7,12 @@ Libin Chen (AndrewID)
 Lucas Huynh (lqh)
 Dipesh Poudel (AndrewID)
 
-#Prerequisites
+# Prerequisites
 Before running the project, ensure that you have the following installed:
 - Anaconda (which includes Python)
 - Ensure that you change your working directory to the src folder.
 
-#Installation of Required Modules
+# Installation of Required Modules
 This project requires the following Python modules:
 
 requests
@@ -50,7 +50,7 @@ pip install scikit-learn
 pip install selenium
 Note: The csv, re, json, time, and math modules are part of Python’s standard library and do not require installation.
 
-#Craigslist Scraping and Cleaning
+# Craigslist Scraping and Cleaning
 Step 1: Scraping Data
 - The craigslist.py file is responsible for scraping data from Craigslist. The script only scrapes listings that include images to reduce the likelihood of scams.
 - The scraped data will be saved as craigslist_apartments_final.csv in the src folder.
@@ -62,7 +62,7 @@ Step 2: Cleaning Data
 - The cleaned data will be written to a new CSV file named cleaned_cl_data.csv in a folder called data.
 Again, for convenience, pre-cleaned data has been provided for you, as running craigslist.py can take up to an hour.
 
-#Running the PittPads Application
+# Running the PittPads Application
 To successfully run the PittPads application, please follow these instructions:
 
 Set Your Working Directory: Ensure that your working directory is the src folder.
