@@ -170,7 +170,7 @@ df_cleaned = pd.DataFrame({
 df_cleaned = df_cleaned.dropna(subset=['price', 'name', 'location', 'zip_code', 'property_url'])
 
 # Save the cleaned data to a new CSV
-df_cleaned.to_csv('data/cleaned_cl_data.csv', index=False)
+df_cleaned.to_csv('../data/cleaned_cl_data.csv', index=False)
 
 # Test the CSV output
 print("Data written to cleaned_cl_data.csv successfully.")
