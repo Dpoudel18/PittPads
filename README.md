@@ -54,6 +54,7 @@ Note: The csv, re, json, time, and math modules are part of Python’s standard 
 Step 1: Scraping Data
 - The craigslist.py file is responsible for scraping data from Craigslist. The script only scrapes listings that include images to reduce the likelihood of scams.
 - The scraped data will be saved as craigslist_apartments_final.csv in the src folder.
+  
 Please note that scraping Craigslist can take anywhere from 45 minutes to an hour.
 
 For your convenience, pre-scraped data has already been provided in the src folder.
@@ -61,6 +62,7 @@ For your convenience, pre-scraped data has already been provided in the src fold
 Step 2: Cleaning Data
 - Once the scraping is complete, craigslist.py cleans the craigslist_apartments_final.csv file by dropping any rows with missing values in the following columns: name, zipcode, price, and location (address).
 - The cleaned data will be written to a new CSV file named cleaned_cl_data.csv in a folder called data.
+- 
 Again, for convenience, pre-cleaned data has been provided for you, as running craigslist.py can take up to an hour.
 
 ## Running the PittPads Application
@@ -70,8 +72,11 @@ Set Your Working Directory: Ensure that your working directory is the src folder
 
 Source Code: The pittpads_streamlit.py file contains the source code for our application. It uses data from the data folder.
 
-Running the Application: To run the application, open your terminal and type the following command:
-streamlit run pittpads_streamlit.py
+Running the Application: 
+
+To run the application, open your terminal and type the following command:
+- streamlit run pittpads_streamlit.py
+- 
 Do NOT simply run the code in VSCode or any other IDE.
 
 Accessing the Application: After running the command, you will be taken to a localhost website where the application will be hosted.
