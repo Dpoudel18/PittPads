@@ -5,7 +5,7 @@ Group Members:
 Yinuo Wang (AndrewID)
 Libin Chen (AndrewID)
 Lucas Huynh (lqh)
-Dipesh Poudel (AndrewID)
+Dipesh Poudel (dpoudel)
 
 ## Prerequisites
 Before running the project, ensure that you have the following installed:
@@ -60,11 +60,22 @@ Please note that scraping Craigslist can take anywhere from 45 minutes to an hou
 
 For your convenience, pre-scraped data has already been provided in the src folder.
 
+
 Step 2: Cleaning Data
 - Once the scraping is complete, craigslist.py cleans the craigslist_apartments_final.csv file by dropping any rows with missing values in the following columns: name, zipcode, price, and location (address).
 - The cleaned data will be written to a new CSV file named cleaned_cl_data.csv in a folder called data.
   
 Again, for convenience, pre-cleaned data has been provided for you, as running craigslist.py can take up to an hour.
+
+
+## Zillow Scraping and Cleaning
+Scraping and Cleaning Data
+- The zillow.py file is responsible for scraping and cleaning data from Zillow. Due to rate limit imposed by Zillow, there are relatively few rows scraped for Zillow compared to other sources.
+- The command to run the Zillow scraper is `python3 zillow.py`
+- The scraped data will be saved as `data/cleaned_zillow_data.csv` in the data folder.
+- The Streamlit application will be then reading the data from `cleaned_zillow_data.csv` file in the data folder.
+  
+
 
 ## Running the PittPads Application
 To successfully run the PittPads application, please follow these instructions:
