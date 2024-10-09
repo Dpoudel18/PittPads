@@ -2,10 +2,10 @@
 
 Group Members:
 
-Yinuo Wang (AndrewID)
-Libin Chen (AndrewID)
-Lucas Huynh (lqh)
-Dipesh Poudel (dpoudel)
+- Yinuo Wang (AndrewID)
+- Libin Chen (AndrewID)
+- Lucas Huynh (lqh)
+- Dipesh Poudel (dpoudel)
 
 ## Prerequisites
 Before running the project, ensure that you have the following installed:
