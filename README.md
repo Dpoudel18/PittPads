@@ -38,16 +38,16 @@ Activate your conda environment (if applicable):
 conda activate your_environment_name
 
 Install required packages using the following commands:
-pip install requests
-pip install beautifulsoup4
-pip install pandas
-pip install streamlit
-pip install folium
-pip install numpy
-pip install matplotlib
-pip install plotly
-pip install scikit-learn
-pip install selenium
+- pip install requests
+- pip install beautifulsoup4
+- pip install pandas
+- pip install streamlit
+- pip install folium
+- pip install numpy
+- pip install matplotlib
+- pip install plotly
+- pip install scikit-learn
+- pip install selenium
 Note: The csv, re, json, time, and math modules are part of Python’s standard library and do not require installation.
 
 ## Craigslist Scraping and Cleaning
