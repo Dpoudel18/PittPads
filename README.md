@@ -47,6 +47,7 @@ Install required packages using the following commands:
 - pip install plotly
 - pip install scikit-learn
 - pip install selenium
+
 Note: The csv, re, json, time, and math modules are part of Python’s standard library and do not require installation.
 
 ## Craigslist Scraping and Cleaning
@@ -54,6 +55,7 @@ Step 1: Scraping Data
 - The craigslist.py file is responsible for scraping data from Craigslist. The script only scrapes listings that include images to reduce the likelihood of scams.
 - The scraped data will be saved as craigslist_apartments_final.csv in the src folder.
 Please note that scraping Craigslist can take anywhere from 45 minutes to an hour.
+
 For your convenience, pre-scraped data has already been provided in the src folder.
 
 Step 2: Cleaning Data
