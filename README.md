@@ -35,7 +35,7 @@ To install the necessary packages, follow these steps:
 - Open Anaconda Prompt (or your terminal).
 - Activate your conda environment (if applicable):
 
-  conda activate your_environment_name
+  `conda activate your_environment_name`
 
 Install required packages using the following commands:
 - pip install requests
