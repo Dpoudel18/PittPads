@@ -62,7 +62,7 @@ For your convenience, pre-scraped data has already been provided in the src fold
 Step 2: Cleaning Data
 - Once the scraping is complete, craigslist.py cleans the craigslist_apartments_final.csv file by dropping any rows with missing values in the following columns: name, zipcode, price, and location (address).
 - The cleaned data will be written to a new CSV file named cleaned_cl_data.csv in a folder called data.
-- 
+  
 Again, for convenience, pre-cleaned data has been provided for you, as running craigslist.py can take up to an hour.
 
 ## Running the PittPads Application
