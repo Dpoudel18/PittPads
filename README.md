@@ -15,21 +15,21 @@ Before running the project, ensure that you have the following installed:
 ## Installation of Required Modules
 This project requires the following Python modules:
 
-requests
-BeautifulSoup (from bs4)
-csv (part of the standard library)
-re (part of the standard library)
-json (part of the standard library)
-pandas
-time (part of the standard library)
-streamlit
-math (part of the standard library)
-folium
-numpy
-matplotlib
-plotly
-sklearn (scikit-learn)
-selenium
+- requests
+- BeautifulSoup (from bs4)
+- csv (part of the standard library)
+- re (part of the standard library)
+- json (part of the standard library)
+- pandas
+- time (part of the standard library)
+- streamlit
+- math (part of the standard library)
+- folium
+- numpy
+- matplotlib
+- plotly
+- sklearn (scikit-learn)
+- selenium
 
 To install the necessary packages, follow these steps:
 
