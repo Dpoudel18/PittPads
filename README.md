@@ -77,7 +77,7 @@ Running the Application:
 
 To run the application, open your terminal and type the following command:
 - streamlit run pittpads_streamlit.py
-- 
+  
 Do NOT simply run the code in VSCode or any other IDE.
 
 Accessing the Application: After running the command, you will be taken to a localhost website where the application will be hosted.
