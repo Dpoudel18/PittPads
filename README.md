@@ -192,3 +192,8 @@ DataFrame Functionalities: While most of the functions are self-explanatory, the
 Loading Images: The display image functionality may sometimes take a while to load. If you encounter issues loading images:
 - Ensure that you have specified a zip code.
 - Refresh the page if needed.
+
+Proximity to CMU Function: Please note that longitude and latitude data are only availabe for Craigslist and Zillow.
+
+Beds and Baths: Please note that Zillow does not have avaiable beds and baths data to be scraped.
+- This functionality works for Redfin, Apartments, and Craigslist.
