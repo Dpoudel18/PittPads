@@ -29,7 +29,7 @@ def get_pittsburgh_fmr():
     
     # Display FMR data
     df = pd.DataFrame(fmr_data["basicdata"])
-    df.to_csv("data/fair_market_rent_pittsburgh_HUD.csv", index = False)
+    df.to_csv("../data/fair_market_rent_pittsburgh_HUD.csv", index = False)
     return fmr_data
 
 print(get_pittsburgh_fmr())
