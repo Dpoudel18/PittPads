@@ -2,7 +2,7 @@
 
 Group Members:
 
-- Yinuo Wang (AndrewID)
+- Yinuo Wang (yinuowan)
 - Libin Chen (libinc)
 - Lucas Huynh (lqh)
 - Dipesh Poudel (dpoudel)
@@ -76,9 +76,72 @@ Scraping and Cleaning Data
 - The Streamlit application will be then reading the data from `cleaned_zillow_data.csv` file in the data folder.
 
 ## Redfin Scraping and Cleaning
-- The redfin.py file is responsible for scraping and cleaning data from Zillow.
+- The redfin.py file is responsible for scraping and cleaning data from Redfin.
 - Before scraping data, make sure install Selenium and Chromedriver, and change the path for ChromeDriver(line 71)
 - The Redfin scaped and cleaned data will be written to a CSV file named `redfin_pittsburgh_rental_complete.csv` in a folder called data.
+
+## Apartments.com Scraping and Cleaning
+
+### Overview
+The `apartments_scraper.py` script is responsible for scraping rental listings from **Apartments.com**, specifically targeting properties in Pittsburgh, PA. The script collects detailed information about each apartment, including pricing, address, number of bedrooms and bathrooms, and additional amenities. After scraping, the data is cleaned and written into a structured CSV file for further analysis or visualization.
+
+### Scraping Process
+The script utilizes **Selenium** to interact with the Apartments.com website and scrape property data from multiple pages (1-18). For each apartment, the script extracts key details such as:
+
+- **Property Name**
+- **Location (Address)**
+- **Zip Code**
+- **Price**
+- **Number of Bedrooms and Bathrooms**
+- **Size** (in square feet)
+- **Phone Number**
+- **Amenities**
+- **Property URL**
+- **Image URL**
+- **Data Source** (Apartments.com)
+
+### Cleaning Process
+The scraped data is processed and cleaned by handling missing values and normalizing text data. Special handling is applied to ensure consistent extraction of fields like price, size, and zip codes using regular expressions.
+
+### Output
+Once the scraping is completed, the cleaned data is stored in a CSV file named `cleaned_apartments_data.csv` inside the `data` directory. The data can be used for analysis or visualization purposes.
+
+### Running the Script
+
+#### ChromeDriver Setup:
+1. Download the appropriate version of **ChromeDriver** for your system.
+2. Extract the file and note its path.
+3. Update the `chrome_driver_path` variable in the script to point to the location of the ChromeDriver executable (line 12).
+
+#### Execution:
+After setting up ChromeDriver, you can run the script using the command below:
+
+```bash
+python apartments_scraper.py
+```
+
+### Output Location:
+The scraped and cleaned data will be saved as `cleaned_apartments_data.csv` in the `data` folder.
+
+### Example of Scraped Data Fields:
+The CSV file will contain the following fields:
+
+- **price**: Price of the apartment.
+- **name**: Name or title of the property.
+- **location**: Full address of the apartment.
+- **zip_code**: Zip code of the property location.
+- **beds**: Number of bedrooms in the apartment.
+- **baths**: Number of bathrooms in the apartment.
+- **size**: Size of the apartment in square feet.
+- **units**: (Field not available on Apartments.com, included for potential future use).
+- **phone**: Contact phone number for the property.
+- **image_url**: URL of the main image of the apartment listing.
+- **property_url**: URL of the apartment listing on Apartments.com.
+- **latitude**: (Field not available, included for potential future use).
+- **longitude**: (Field not available, included for potential future use).
+- **description**: (Field not available, included for potential future use).
+- **amenity**: List of amenities offered by the apartment.
+- **data_source**: The source of the data (set to "Apartments.com").
 
 
 ## Running the PittPads Application
