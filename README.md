@@ -70,11 +70,18 @@ Again, for convenience, pre-cleaned data has been provided for you, as running `
 
 
 ## Zillow Scraping and Cleaning
-Scraping and Cleaning Data
+### Scraping and Cleaning Data
 - The zillow.py file is responsible for scraping and cleaning data from Zillow. Due to rate limit imposed by Zillow, there are relatively few rows scraped for Zillow compared to other sources.
 - The command to run the Zillow scraper is `python3 zillow.py`
 - The scraped data will be saved as `data/cleaned_zillow_data.csv` in the data folder.
 - The Streamlit application will be then reading the data from `cleaned_zillow_data.csv` file in the data folder.
+
+### Execution
+After setting up src as your working directory, you can run the script using the command below:
+
+```bash
+python3 zillow.py
+```
 
 ## Redfin Scraping and Cleaning
 - The redfin.py file is responsible for scraping and cleaning data from Redfin.
@@ -143,6 +150,21 @@ The CSV file generated from scraping Apartments.com will contain the following f
 - **description**: Detailed description of the apartment.
 - **amenity**: List of amenities offered by the apartment.
 - **data_source**: The source of the data.
+
+## Get HUD data using API
+
+### Overview
+The `fair_market_rent_hud.py` script is responsible for getting the average rent price by zip code using HUD (United States Department of Housing and Urban Development) API. The `api_key.py` has a sample API key which can be used as an API key. Or you can also get your own API key from this website: https://www.huduser.gov/portal/dataset/fmr-api.html
+
+### Data Extraction Process
+The `fair_market_rent_hud.py` script generates a csv file by making an API call to the HUD endpoint and uploads the data in the `data/fair_market_rent_pittsburgh_HUD.csv` file
+
+### Execution:
+After setting up src as your working directory, you can run the script using the command below:
+
+```bash
+python3 fair_market_rent_hud.py
+```
 
 ## Running the PittPads Application
 To successfully run the PittPads application, please follow these instructions:
