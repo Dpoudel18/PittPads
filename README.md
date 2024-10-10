@@ -123,26 +123,25 @@ python apartments_scraper.py
 ### Output Location:
 The scraped and cleaned data will be saved as `cleaned_apartments_data.csv` in the `data` folder.
 
-### Example of Scraped Data Fields:
-The CSV file will contain the following fields:
+## Example of Scraped Data Fields:
+The CSV file generated from scraping Apartments.com will contain the following fields:
 
-- **price**: Price of the apartment.
+- **price**: Price of the apartment (in USD).
 - **name**: Name or title of the property.
 - **location**: Full address of the apartment.
 - **zip_code**: Zip code of the property location.
 - **beds**: Number of bedrooms in the apartment.
 - **baths**: Number of bathrooms in the apartment.
 - **size**: Size of the apartment in square feet.
-- **units**: (Field not available on Apartments.com, included for potential future use).
+- **units**: Total number of units in the apartment complex.
 - **phone**: Contact phone number for the property.
 - **image_url**: URL of the main image of the apartment listing.
 - **property_url**: URL of the apartment listing on Apartments.com.
-- **latitude**: (Field not available, included for potential future use).
-- **longitude**: (Field not available, included for potential future use).
-- **description**: (Field not available, included for potential future use).
+- **latitude**: Latitude coordinates of the apartment.
+- **longitude**: Longitude coordinates of the apartment.
+- **description**: Detailed description of the apartment.
 - **amenity**: List of amenities offered by the apartment.
-- **data_source**: The source of the data (set to "Apartments.com").
-
+- **data_source**: The source of the data.
 
 ## Running the PittPads Application
 To successfully run the PittPads application, please follow these instructions:
