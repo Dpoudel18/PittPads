@@ -83,10 +83,28 @@ After setting up src as your working directory, you can run the script using the
 python3 zillow.py
 ```
 
+
 ## Redfin Scraping and Cleaning
-- The redfin.py file is responsible for scraping and cleaning data from Redfin.
-- Before scraping data, make sure install Selenium and Chromedriver, and change the path for ChromeDriver(line 71)
+- The `redfin.py`is responsible for scraping rental listings from www.redfin.com, specifically targeting properties in Pittsburgh, PA.
+
+### Scraping Data
+- Before scraping data, make sure install Selenium and appropriate version of **ChromeDriver** for your system, and change the path for ChromeDriver(line 71)
+- The script utilizes **Selenium** to interact with the www.redfin.com website and scrape property data from multiple pages (1-9). For each apartment, the script extracts key details such as:
+- **Location (Address)**
+- **Price**
+- **Number of Bedrooms and Bathrooms**
+- **Size** (in square feet)
+- **Units**
+- **Phone Number**
+- **Property URL**
+- **Image URL**
+
+- The scraped data will be saved as `redfin_pittsburgh_rental_scraped.csv` in the data folder.
+  
+### Cleaning Process
+- Extract apartment or house name form Property_URL, zipcode from location using regex expression, define clean_beds_baths and clean_size function, etc.
 - The Redfin scaped and cleaned data will be written to a CSV file named `redfin_pittsburgh_rental_complete.csv` in a folder called data.
+
 
 ## Apartments.com Scraping and Cleaning
 
