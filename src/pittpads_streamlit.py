@@ -12,6 +12,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
 from sklearn.impute import SimpleImputer
 from sklearn.ensemble import RandomForestRegressor
+import re
 
 # Load the CSV files from 'data' folder
 
@@ -107,6 +108,70 @@ beds_filter = st.sidebar.multiselect("Number of Beds", options=sorted(df['beds']
 baths_filter = st.sidebar.multiselect("Number of Baths", options=sorted(df['baths'].unique()), default=list(df['baths'].unique()))
 data_source_filter = st.sidebar.multiselect("Data Source", options=sorted(df['data_source'].unique()), default=list(df['data_source'].unique()))
 
+# Filter by amenities
+
+# Define the list of popular amenities
+popular_amenities = [
+    'In Unit Washer & Dryer',
+    'Air Conditioning',
+    'Utilities Included',
+    'Pets Allowed',
+    'Refrigerator',
+    'Dishwasher',
+    'Parking',
+    'Garage',
+    'Laundry Facilities',
+    'Washer & Dryer Hookups',
+    'Pool',
+    'Fitness Center',
+    'Walk-In Closets',
+    'Gated Community'
+]
+
+# Standardize amenity names
+def standardize_amenity_name(name):
+    return re.sub(r'\W+', '', name).lower().strip()
+
+popular_amenities_std = [standardize_amenity_name(a) for a in popular_amenities]
+
+def map_amenity(data_amenity):
+    data_amenity_std = standardize_amenity_name(data_amenity)
+    for i, popular_amenity_std in enumerate(popular_amenities_std):
+        if popular_amenity_std in data_amenity_std or data_amenity_std in popular_amenity_std:
+            return popular_amenities[i]
+    return None
+
+def get_amenity_list(amenity_str):
+    if isinstance(amenity_str, str):
+        return [a.strip() for a in amenity_str.split(',') if a.strip()]
+    else:
+        return []
+
+def map_amenity_list(amenity_list):
+    mapped_list = []
+    for amenity in amenity_list:
+        mapped_amenity = map_amenity(amenity)
+        if mapped_amenity and mapped_amenity not in mapped_list:
+            mapped_list.append(mapped_amenity)
+    return mapped_list
+
+# Function to check if amenities match
+def check_amenities(row_amenities, selected_amenities):
+    if not selected_amenities:
+        return True
+    return all(amenity in row_amenities for amenity in selected_amenities)
+
+# Fill NaN values in 'amenity' column and process amenities
+df['amenity'] = df['amenity'].fillna('')
+df['amenity_list'] = df['amenity'].apply(get_amenity_list)
+df['amenity_list_mapped'] = df['amenity_list'].apply(map_amenity_list)
+
+# Amenity Filter
+amenities_filter = st.sidebar.multiselect(
+    "Select Amenities",
+    options=popular_amenities,
+    default=[]  # Default to all amenities
+)
 
 # Filter by zip_code
 df['zip_code'] = df['zip_code'].astype(str)
@@ -129,7 +194,8 @@ filtered_df = df[
     (df['beds'].isin(beds_filter)) &
     (df['baths'].isin(baths_filter)) &
     (df['zip_code'].isin(zip_code_filter)) &
-    (df['data_source'].isin(data_source_filter))
+    (df['data_source'].isin(data_source_filter)) &
+    df['amenity_list_mapped'].apply(lambda x: check_amenities(x, amenities_filter))
 ]
 
 # Display the filtered results
