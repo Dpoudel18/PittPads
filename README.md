@@ -43,6 +43,7 @@ Install required packages using the following commands:
 - pip install pandas
 - pip install streamlit
 - pip install folium
+- pip install streamlit-folium
 - pip install numpy
 - pip install matplotlib
 - pip install plotly
