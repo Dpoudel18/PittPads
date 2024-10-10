@@ -197,3 +197,5 @@ Proximity to CMU Function: Please note that longitude and latitude data are only
 
 Beds and Baths: Please note that Zillow does not have avaiable beds and baths data to be scraped.
 - This functionality works for Redfin, Apartments, and Craigslist.
+
+Heatmap: The `pittsburgh_rent_heatmap.html` file in the src folder is automically loaded onto PittPads.
