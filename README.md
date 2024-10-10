@@ -3,7 +3,7 @@
 Group Members:
 
 - Yinuo Wang (AndrewID)
-- Libin Chen (AndrewID)
+- Libin Chen (libinc)
 - Lucas Huynh (lqh)
 - Dipesh Poudel (dpoudel)
 
@@ -74,7 +74,11 @@ Scraping and Cleaning Data
 - The command to run the Zillow scraper is `python3 zillow.py`
 - The scraped data will be saved as `data/cleaned_zillow_data.csv` in the data folder.
 - The Streamlit application will be then reading the data from `cleaned_zillow_data.csv` file in the data folder.
-  
+
+## Redfin Scraping and Cleaning
+- The redfin.py file is responsible for scraping and cleaning data from Zillow.
+- Before scraping data, make sure install Selenium and Chromedriver, and change the path for ChromeDriver(line 71)
+- The Redfin scaped and cleaned data will be written to a CSV file named `redfin_pittsburgh_rental_complete.csv` in a folder called data.
 
 
 ## Running the PittPads Application
