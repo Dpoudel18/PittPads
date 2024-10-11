@@ -14,7 +14,7 @@ Please watch this video for how to run the programs: https://youtu.be/eh0UWwTBFQ
 ## Prerequisites
 Before running the project, ensure that you have the following installed:
 - Anaconda (which includes Python)
-- Ensure that you change your working directory to the src folder.
+- Ensure that you change your working directory to the `src` folder.
 
 ## Installation of Required Modules
 This project requires the following Python modules:
@@ -59,7 +59,7 @@ Note: The csv, re, json, time, and math modules are part of Python’s standard 
 ## Craigslist Scraping and Cleaning
 Step 1: Scraping Data
 - The `craigslist.py` file is responsible for scraping data from Craigslist. The script only scrapes listings that include images to reduce the likelihood of scams.
-- The scraped data will be saved as `craigslist_apartments_final.csv` in the src folder.
+- The scraped data will be saved as `craigslist_apartments_final.csv` in the `src` folder.
   
 Please note that scraping Craigslist can take anywhere from 45 minutes to an hour. The codes scrapes for:
 - Name
@@ -78,12 +78,12 @@ Please note that scraping Craigslist can take anywhere from 45 minutes to an hou
 - Image Link
 - Link to Listing
 
-For your convenience, pre-scraped data has already been provided in the src folder.
+For your convenience, pre-scraped data has already been provided in the `src` folder.
 
 
 Step 2: Cleaning Data
 - Once the scraping is complete, `craigslist.py` cleans the craigslist_apartments_final.csv file by dropping any rows with missing values in the following columns: name, zipcode, price, and location (address).
-- The cleaned data will be written to a new CSV file named `cleaned_cl_data.csv` in a folder called data.
+- The cleaned data will be written to a new CSV file named `cleaned_cl_data.csv` in a folder called `data`.
   
 Again, for convenience, pre-cleaned data has been provided for you, as running `craigslist.py` can take up to an hour.
 
@@ -106,7 +106,7 @@ The cleaned data contains:
 - data_source
 
   ### Execution
-After setting up src as your working directory, you can run the script using the command below:
+After setting up `src` as your working directory, you can run the script using the command below:
 
 ```bash
 python3 craigslist.py
@@ -146,7 +146,7 @@ python3 zillow.py
   
 ### Cleaning Process
 - Extract apartment or house name form Property_URL, zipcode from location using regex expression, define clean_beds_baths and clean_size function, etc.
-- The Redfin scaped and cleaned data will be written to a CSV file named `redfin_pittsburgh_rental_complete.csv` in a folder called data.
+- The Redfin scaped and cleaned data will be written to a CSV file named `redfin_pittsburgh_rental_complete.csv` in a folder called `data`.
 
 
 ## Apartments.com Scraping and Cleaning
@@ -230,9 +230,9 @@ python3 fair_market_rent_hud.py
 ## Running the PittPads Application
 To successfully run the PittPads application, please follow these instructions:
 
-Set Your Working Directory: Ensure that your working directory is the src folder.
+Set Your Working Directory: Ensure that your working directory is the `src` folder.
 
-Source Code: The `pittpads_streamlit.py` file contains the source code for our application. It uses data from the data folder.
+Source Code: The `pittpads_streamlit.py` file contains the source code for our application. It uses data from the `data` folder.
 
 Running the Application: 
 
@@ -244,7 +244,10 @@ Do NOT simply run the code in VSCode or any other IDE.
 
 Accessing the Application: After running the command, you will be taken to a localhost website where the application will be hosted.
 
-Using the Filters: All filters are fully populated except for the zip code. To utilize all the features of our tools, please specify a zip code of your choosing.
+WE STRONGLY RECOMMEND YOU REFRESH THE PAGE ONCE BEFORE USING THE APPLICATION.
+- Sometimes, a big white gap will appear between the map and price prediction function. By refreshing the page, this gap disappears.
+
+Using the Filters: All filters are fully populated at the start except for amenities.
 
 DataFrame Functionalities: While most of the functions are self-explanatory, there are some cool features you can use with the DataFrames:
 - You can press the arrow on a column name to sort the values from lowest to highest.
