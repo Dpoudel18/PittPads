@@ -61,7 +61,22 @@ Step 1: Scraping Data
 - The `craigslist.py` file is responsible for scraping data from Craigslist. The script only scrapes listings that include images to reduce the likelihood of scams.
 - The scraped data will be saved as `craigslist_apartments_final.csv` in the src folder.
   
-Please note that scraping Craigslist can take anywhere from 45 minutes to an hour.
+Please note that scraping Craigslist can take anywhere from 45 minutes to an hour. The codes scrapes for:
+- Name
+- Type
+- Price
+- Neighborhood
+- Address
+- Latitude
+- Longitude
+- Bedrooms
+- Bathrooms
+- Sq. Footage
+- Rent Period
+- Laundry
+- Parking
+- Image Link
+- Link to Listing
 
 For your convenience, pre-scraped data has already been provided in the src folder.
 
@@ -72,6 +87,23 @@ Step 2: Cleaning Data
   
 Again, for convenience, pre-cleaned data has been provided for you, as running `craigslist.py` can take up to an hour.
 
+The cleaned data contains:
+- price
+- name
+- location
+- zip_code
+- beds
+- baths
+- size
+- units
+- phone
+- image_url
+- property_url
+- latitude
+- longitude
+- description
+- amenity
+- data_source
 
 ## Zillow Scraping and Cleaning
 ### Scraping and Cleaning Data
