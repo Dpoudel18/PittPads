@@ -152,7 +152,7 @@ python3 zillow.py
 ## Apartments.com Scraping and Cleaning
 
 ### Overview
-The `apartments_scraper.py` script is responsible for scraping rental listings from **Apartments.com**, specifically targeting properties in Pittsburgh, PA. The script collects detailed information about each apartment, including pricing, address, number of bedrooms and bathrooms, and additional amenities. After scraping, the data is cleaned and written into a structured CSV file for further analysis or visualization.
+The `apartments.py` script is responsible for scraping rental listings from **Apartments.com**, specifically targeting properties in Pittsburgh, PA. The script collects detailed information about each apartment, including pricing, address, number of bedrooms and bathrooms, and additional amenities. After scraping, the data is cleaned and written into a structured CSV file for further analysis or visualization.
 
 ### Scraping Process
 The script utilizes **Selenium** to interact with the Apartments.com website and scrape property data from multiple pages (1-18). For each apartment, the script extracts key details such as:
