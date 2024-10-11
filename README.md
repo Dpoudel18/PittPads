@@ -7,6 +7,10 @@ Group Members:
 - Lucas Huynh (lqh)
 - Dipesh Poudel (dpoudel)
 
+## Scraping and Application Demo Video
+
+Please watch this video for how to run the programs: https://youtu.be/eh0UWwTBFQU?feature=shared
+
 ## Prerequisites
 Before running the project, ensure that you have the following installed:
 - Anaconda (which includes Python)
