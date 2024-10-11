@@ -186,7 +186,7 @@ Once the scraping is completed, the cleaned data is stored in a CSV file named `
 After setting up ChromeDriver, you can run the script using the command below:
 
 ```bash
-python apartments_scraper.py
+python apartments.py
 ```
 
 ### Output Location:
