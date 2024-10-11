@@ -105,6 +105,13 @@ The cleaned data contains:
 - amenity
 - data_source
 
+  ### Execution
+After setting up src as your working directory, you can run the script using the command below:
+
+```bash
+python3 craigslist.py
+```
+
 ## Zillow Scraping and Cleaning
 ### Scraping and Cleaning Data
 - The zillow.py file is responsible for scraping and cleaning data from Zillow. Due to rate limit imposed by Zillow, there are relatively few rows scraped for Zillow compared to other sources.
